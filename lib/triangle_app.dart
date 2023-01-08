@@ -7,10 +7,14 @@ detectTriangle(num sideA, num sideB, num sideC) {
   });
 
   if (sides[0] == sides[1] && sides[0] == sides[2]) {
-    throw Exception('This is Inequal Triangle');
+    return "Segitiga Sama Sisi";
   }
 
   if (sides[0] == sides[1]) {
     return "Segitiga Sama Kaki";
+  }
+
+  if (sides[0] + sides[1] <= sides[2]) {
+    throw Exception('This is Inequal Triangle');
   }
 }
